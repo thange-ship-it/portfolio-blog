@@ -427,6 +427,19 @@ footer a:hover {
     line-height: 1.65;
 }
 
+.blog-read-more {
+    display: inline-block;
+    margin-top: 12px;
+    font-size: 0.88rem;
+    font-weight: 600;
+    color: var(--warm-red-brown);
+    letter-spacing: 0.03em;
+}
+
+.blog-card:hover .blog-read-more {
+    text-decoration: underline;
+}
+
 .blog-empty {
     text-align: center;
     padding: 60px 20px;

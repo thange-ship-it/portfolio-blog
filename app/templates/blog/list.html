@@ -14,9 +14,8 @@
         <a href="{{ url_for('blog.blog_post', slug=post.slug) }}" class="blog-card">
             <h2>{{ post.title }}</h2>
             <p class="blog-meta">{{ post.created_at.strftime('%B %d, %Y') }}</p>
-            {% if post.summary %}
-            <p class="blog-summary">{{ post.summary }}</p>
-            {% endif %}
+            <p class="blog-summary">{{ previews[post.id] }}</p>
+            <span class="blog-read-more">Read more</span>
         </a>
         {% endfor %}
     </div>
