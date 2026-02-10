@@ -1,0 +1,14 @@
+{% extends "base.html" %}
+
+{% block title %}{{ post.title }} — Tim Hange{% endblock %}
+
+{% block content %}
+<article class="blog-post">
+    <a href="{{ url_for('blog.blog_list') }}" class="blog-back">&larr; Back to Blog</a>
+    <h1>{{ post.title }}</h1>
+    <p class="blog-meta">{{ post.created_at.strftime('%B %d, %Y') }}</p>
+    <div class="blog-body">
+        {{ content_html|safe }}
+    </div>
+</article>
+{% endblock %}

@@ -1,0 +1,50 @@
+{% extends "base.html" %}
+
+{% block content %}
+    <!-- HERO -->
+    <section class="hero">
+        <div class="hero-text">
+            <h1 class="hero-name">Hi, I'm Tim.</h1>
+            <p class="hero-title">Instructional Designer · AI Strategist</p>
+            <p class="hero-greeting"><strong>I'm passionate about two things:</strong></p>
+            <ul class="power-lines">
+                <li>Designing learning experiences that go deep and deliver real results.</li>
+                <li>Helping organizations cut through the AI noise and build solutions that actually work.</li>
+            </ul>
+            <a href="{{ url_for('main.about') }}" class="hero-cta">Learn More About Me</a>
+        </div>
+        <div class="hero-image">
+            <div class="headshot-container">
+                <img src="{{ url_for('static', filename='images/headshot.jpg') }}" alt="Tim Hange" class="headshot-img">
+            </div>
+        </div>
+    </section>
+
+    <!-- DIVIDER -->
+    <div class="section-divider"><hr></div>
+
+    <!-- WHAT I DO -->
+    <section class="what-i-do">
+        <div class="what-i-do-inner">
+            <p class="section-label">What I Bring</p>
+            <h2 class="section-heading">A unique blend of experience</h2>
+            <div class="cards">
+                <div class="card">
+                    <div class="card-number">01</div>
+                    <h3>Instructional Design</h3>
+                    <p>15 years in education leadership, designing curriculum and learning experiences that drive measurable outcomes. UbD-aligned, learner-centered design.</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">02</div>
+                    <h3>AI Strategy</h3>
+                    <p>Building practical AI solutions that solve real problems. From conversational agents to workflow automation, bridging the gap between AI hype and real-world value.</p>
+                </div>
+                <div class="card">
+                    <div class="card-number">03</div>
+                    <h3>Software Engineering</h3>
+                    <p>8 years building enterprise software at Sprint and DST Systems. Full-stack development, database design, and production deployment.</p>
+                </div>
+            </div>
+        </div>
+    </section>
+{% endblock %}

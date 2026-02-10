@@ -1,0 +1,54 @@
+{% extends "base.html" %}
+
+{% block title %}Admin Dashboard — Tim Hange{% endblock %}
+
+{% block content %}
+<div class="admin-container">
+    <div class="admin-actions">
+        <h1>Blog Posts</h1>
+        <div>
+            <a href="{{ url_for('admin.new_post') }}" class="btn btn-primary btn-sm">New Post</a>
+            <a href="{{ url_for('admin.logout') }}" class="btn btn-secondary btn-sm" style="margin-left: 8px;">Log Out</a>
+        </div>
+    </div>
+
+    {% if posts %}
+    <table class="admin-table">
+        <thead>
+            <tr>
+                <th>Title</th>
+                <th>Status</th>
+                <th>Date</th>
+                <th>Actions</th>
+            </tr>
+        </thead>
+        <tbody>
+            {% for post in posts %}
+            <tr>
+                <td>{{ post.title }}</td>
+                <td>
+                    {% if post.published %}
+                    <span class="status-badge status-published">Published</span>
+                    {% else %}
+                    <span class="status-badge status-draft">Draft</span>
+                    {% endif %}
+                </td>
+                <td>{{ post.created_at.strftime('%b %d, %Y') }}</td>
+                <td>
+                    <div class="actions">
+                        <a href="{{ url_for('admin.edit_post', post_id=post.id) }}" class="btn btn-secondary btn-sm">Edit</a>
+                        <form method="POST" action="{{ url_for('admin.delete_post', post_id=post.id) }}" style="display:inline;" onsubmit="return confirm('Delete this post?')">
+                            <input type="hidden" name="csrf_token" value="{{ csrf_token() }}">
+                            <button type="submit" class="btn btn-danger btn-sm">Delete</button>
+                        </form>
+                    </div>
+                </td>
+            </tr>
+            {% endfor %}
+        </tbody>
+    </table>
+    {% else %}
+    <p class="blog-empty">No posts yet. <a href="{{ url_for('admin.new_post') }}">Create your first post.</a></p>
+    {% endif %}
+</div>
+{% endblock %}

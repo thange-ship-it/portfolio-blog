@@ -1,0 +1,27 @@
+{% extends "base.html" %}
+
+{% block title %}Blog — Tim Hange{% endblock %}
+
+{% block content %}
+<div class="page-content">
+    <p class="section-label">Blog</p>
+    <h1>Latest Posts</h1>
+    <p class="page-subtitle">Thoughts on AI, instructional design, and building things that matter.</p>
+
+    {% if posts %}
+    <div class="blog-list">
+        {% for post in posts %}
+        <a href="{{ url_for('blog.blog_post', slug=post.slug) }}" class="blog-card">
+            <h2>{{ post.title }}</h2>
+            <p class="blog-meta">{{ post.created_at.strftime('%B %d, %Y') }}</p>
+            {% if post.summary %}
+            <p class="blog-summary">{{ post.summary }}</p>
+            {% endif %}
+        </a>
+        {% endfor %}
+    </div>
+    {% else %}
+    <p class="blog-empty">No posts yet. Check back soon!</p>
+    {% endif %}
+</div>
+{% endblock %}
