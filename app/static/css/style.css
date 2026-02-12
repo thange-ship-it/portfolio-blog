@@ -355,7 +355,7 @@ footer a:hover {
 }
 
 .page-content.about-page {
-    padding-bottom: 0;
+    padding-bottom: 60px;
 }
 
 .page-content h1 {
@@ -399,7 +399,7 @@ footer a:hover {
 
 /* Key Strengths */
 .about-strengths {
-    padding: 0 60px 60px 60px;
+    padding: 30px 60px 30px 60px;
 }
 
 .about-strengths-inner {
@@ -1083,7 +1083,7 @@ footer a:hover {
 
     /* About page responsive */
     .about-strengths {
-        padding: 0 24px 40px 24px;
+        padding: 20px 24px 20px 24px;
     }
 
     .strengths-grid {
