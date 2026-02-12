@@ -395,6 +395,7 @@ footer a:hover {
     font-size: 1.25rem;
     line-height: 1.8;
     color: var(--charcoal);
+    margin-bottom: 0;
 }
 
 /* Key Strengths */
