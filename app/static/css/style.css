@@ -354,9 +354,7 @@ footer a:hover {
     padding: 60px 60px 80px 60px;
 }
 
-.page-content.about-page {
-    padding-bottom: 0;
-}
+/* (about-page override removed — intro uses .about-intro instead) */
 
 .page-content h1 {
     font-family: 'Lora', serif;
@@ -390,9 +388,27 @@ footer a:hover {
 
 /* ===== ABOUT PAGE ===== */
 
-/* Center the intro section */
-.about-page {
+/* Intro section — same outer-padding + inner-max-width pattern as rest of page */
+.about-intro {
+    padding: 60px 60px 0 60px;
     text-align: center;
+}
+
+.about-intro-inner {
+    max-width: 1200px;
+    margin: 0 auto;
+}
+
+.about-intro h1 {
+    font-family: 'Lora', serif;
+    font-size: 2.6rem;
+    font-weight: 700;
+    color: var(--deep-teal);
+    margin-bottom: 8px;
+}
+
+.about-intro .page-subtitle {
+    margin-bottom: 32px;
 }
 
 .about-lead {
@@ -1107,6 +1123,10 @@ footer a:hover {
     }
 
     /* About page responsive */
+    .about-intro {
+        padding: 40px 24px 0 24px;
+    }
+
     .about-strengths {
         padding: 0 24px 40px 24px;
     }
