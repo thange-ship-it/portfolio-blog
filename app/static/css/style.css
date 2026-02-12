@@ -355,7 +355,7 @@ footer a:hover {
 }
 
 .page-content.about-page {
-    padding-bottom: 60px;
+    padding-bottom: 40px;
 }
 
 .page-content h1 {
@@ -399,7 +399,7 @@ footer a:hover {
 
 /* Key Strengths */
 .about-strengths {
-    padding: 30px 60px 30px 60px;
+    padding: 40px 60px 40px 60px;
 }
 
 .about-strengths-inner {
@@ -441,7 +441,7 @@ footer a:hover {
 
 /* Approach Sections */
 .about-approaches {
-    padding: 60px 60px 80px 60px;
+    padding: 40px 60px 40px 60px;
 }
 
 .about-approaches-inner {
@@ -451,7 +451,7 @@ footer a:hover {
 
 .about-approaches .section-divider {
     padding: 0;
-    margin: 48px 0;
+    margin: 40px 0;
 }
 
 .approach-block p {
@@ -1083,7 +1083,7 @@ footer a:hover {
 
     /* About page responsive */
     .about-strengths {
-        padding: 20px 24px 20px 24px;
+        padding: 30px 24px 30px 24px;
     }
 
     .strengths-grid {
@@ -1091,7 +1091,7 @@ footer a:hover {
     }
 
     .about-approaches {
-        padding: 40px 24px 60px 24px;
+        padding: 30px 24px 30px 24px;
     }
 
     .example-pair {
