@@ -454,6 +454,10 @@ footer a:hover {
     margin: 40px 0;
 }
 
+.approach-block .section-label {
+    margin-bottom: 6px;
+}
+
 .approach-block p {
     font-size: 1.05rem;
     line-height: 1.75;
